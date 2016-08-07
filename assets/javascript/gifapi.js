@@ -3,7 +3,7 @@
 var topics = ["cars", "trains", "instruments", "books", "geometry", "prisms", "caves", "space"];
 var gifsdisplayed = 10;
 var authKey = "&api_key=dc6zaTOxFJmzC&limit=10"
-var queryURLBase = "http://api.giphy.com/v1/gifs/search?q=";
+var queryURLBase = "https://api.giphy.com/v1/gifs/search?q=";
 //functions
 
 for (var i = 0; i < topics.length; i++) {
@@ -25,7 +25,7 @@ $('button').on('click', function() {
     var topic = $(this).data('type');
     // console.log(topic);
 
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=dc6zaTOxFJmzC&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=dc6zaTOxFJmzC&limit=10";
        // console.log(queryURL);
 
     $.ajax({url: queryURL, method: 'GET'})
